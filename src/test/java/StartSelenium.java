@@ -12,6 +12,9 @@ public class StartSelenium {
     wd=new ChromeDriver();
     wd.get("https://telranedu.web.app/home");
     }
+
+
+
     @Test
     public void test(){
         //old strategies
@@ -31,6 +34,10 @@ public class StartSelenium {
         wd.findElement(By.cssSelector("[href*='og']"));
         wd.findElement(By.cssSelector("[href^='/log']"));
         wd.findElement(By.cssSelector("[href$='gin']"));
+        //About
+        wd.findElement(By.cssSelector(".active"));
+        wd.findElement(By.cssSelector("[href='/about']"));
+        wd.findElement(By.cssSelector("[href*='bou']"));
 
     }
     @AfterTest

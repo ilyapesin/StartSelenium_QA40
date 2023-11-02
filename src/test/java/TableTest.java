@@ -6,6 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TableTest {
     WebDriver wd;
     @BeforeMethod
@@ -16,7 +19,13 @@ public class TableTest {
 
     @Test
     public void testCss() {
+
         wd.findElement(By.cssSelector("#customers tr:nth-child(7) td:nth-child(3)"));
+        System.out.println("Rows = "+wd.findElements(By.cssSelector("#customers tr")).size());
+        System.out.println("Columns = "+wd.findElements(By.cssSelector("#customers th")).size());
+        wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
+        wd.findElement(By.cssSelector("#customers td:last-child"));
+
     }
     @AfterMethod
     public void tearDown(){
