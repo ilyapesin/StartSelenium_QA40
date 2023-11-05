@@ -20,6 +20,7 @@ public class StartSelenium {
         //old strategies
         wd.findElement(By.tagName("a"));
         wd.findElement(By.cssSelector("a"));
+        wd.findElement(By.xpath("//a"));
 
         wd.findElement(By.id("root"));
         wd.findElement(By.cssSelector("#root"));
