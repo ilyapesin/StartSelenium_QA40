@@ -24,16 +24,24 @@ public class StartSelenium {
 
         wd.findElement(By.id("root"));
         wd.findElement(By.cssSelector("#root"));
+        wd.findElement(By.xpath("//*[@id='root']"));
 
         wd.findElement(By.className("container"));
         wd.findElement(By.cssSelector(".container"));
+        wd.findElement(By.xpath("//*[@class='container']"));
 
         wd.findElement(By.linkText("HOME"));
+        wd.findElement(By.xpath("//*[.='HOME']"));
+        wd.findElement(By.xpath("//*[text()='HOME']"));
         wd.findElement(By.partialLinkText("OM"));
+        wd.findElement(By.xpath("//*[contains(text(),'OM')]"));
 
         wd.findElement(By.cssSelector("[href='/login']"));
+        wd.findElement(By.xpath("//*[@href='/login']"));
         wd.findElement(By.cssSelector("[href*='og']"));
+        wd.findElement(By.xpath("//a[contains(@href,'og')]"));
         wd.findElement(By.cssSelector("[href^='/log']"));
+        wd.findElement(By.xpath("//a[starts-with(@href,'/log')]"));
         wd.findElement(By.cssSelector("[href$='gin']"));
         //About
         wd.findElement(By.cssSelector(".active"));
